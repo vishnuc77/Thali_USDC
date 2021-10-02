@@ -6,7 +6,9 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Token is ERC20, Pausable, Ownable {
-    constructor() ERC20("USDC token", "USDC"){}
+    constructor() ERC20("USDC token", "USDCT"){
+        _mint(owner(), 1000 * 10 ** 5);
+    }
 
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
@@ -18,6 +20,10 @@ contract Token is ERC20, Pausable, Ownable {
 
     function unpause() public onlyOwner {
         _unpause();
+    }
+
+    function decimals() public pure override returns (uint8) {
+        return 5;
     }
     function _beforeTokenTransfer(
         address from,

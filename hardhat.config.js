@@ -1,14 +1,10 @@
 require("@nomiclabs/hardhat-waffle");
+require('dotenv').config({path: './.env'});
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
-task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
 
-  for (const account of accounts) {
-    console.log(account.address);
-  }
-});
+const alchemy_url = "https://eth-rinkeby.alchemyapi.io/v2/kPJSqlXGFLxT3DFZ0LWLqaxx2Vhnz1kp";
+const private_key = "b47efed4ff48b66102367ba5c592f182325913961bc84eee4bf1c20d440dcc2e";
+
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
@@ -18,4 +14,10 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  networks: {
+    rinkeby: {
+      url: alchemy_url,
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
+    },
+  },
 };
