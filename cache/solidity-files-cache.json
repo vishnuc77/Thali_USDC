@@ -250,8 +250,8 @@
       ]
     },
     "/Users/vishnuc/Documents/HardhatProjects/thaliExercise1/contracts/Token.sol": {
-      "lastModificationDate": 1633024265712,
-      "contentHash": "350097c2a52275000620b3a6e4540534",
+      "lastModificationDate": 1633240071087,
+      "contentHash": "df89adc35267ca0ead4a300da378bc41",
       "sourceName": "contracts/Token.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -288,8 +288,8 @@
       ]
     },
     "/Users/vishnuc/Documents/HardhatProjects/thaliExercise1/contracts/Stake.sol": {
-      "lastModificationDate": 1633238642008,
-      "contentHash": "ba7e24b51ac2d81df1f09bae82d2e888",
+      "lastModificationDate": 1633240283354,
+      "contentHash": "19d0484b2ccdd43f1b6838bcca4bd43a",
       "sourceName": "contracts/Stake.sol",
       "solcConfig": {
         "version": "0.8.4",

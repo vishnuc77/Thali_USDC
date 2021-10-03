@@ -12,7 +12,7 @@ async function main() {
     stake = await stakeContract.deploy(token.address);
   
     console.log("Token smart contract address:", token.address);
-    console.log("Balance of owner:", ownerBalance);
+    console.log("Balance of owner:", ownerBalance.toString());
     console.log("Stake smart contract address:", stake.address);
   }
   
