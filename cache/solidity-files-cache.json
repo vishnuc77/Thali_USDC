@@ -288,8 +288,8 @@
       ]
     },
     "/Users/vishnuc/Documents/HardhatProjects/thaliExercise1/contracts/Stake.sol": {
-      "lastModificationDate": 1633152267294,
-      "contentHash": "67c34462373123a066c1f8ae328ab238",
+      "lastModificationDate": 1633238642008,
+      "contentHash": "ba7e24b51ac2d81df1f09bae82d2e888",
       "sourceName": "contracts/Stake.sol",
       "solcConfig": {
         "version": "0.8.4",

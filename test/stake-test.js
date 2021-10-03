@@ -41,6 +41,7 @@ describe("Stake contract", function () {
             const ownerBalance = await token.balanceOf(owner.address);
             await token.approve(stake.address, 1000000);
             await stake.stake(100000);
+            expect(await token.balanceOf(stake.address)).to.equal(100000);
             expect(await stake.totalFee()).to.equal(100000*2/1000);
         });
 
@@ -50,8 +51,13 @@ describe("Stake contract", function () {
         });
 
         it("should be able to collect fee", async function () {
-            await token.approve(stake.address, 1000000);
-            
+            await token.transfer(addr1.address, 100000);
+            const ownerBalance = await token.balanceOf(owner.address);
+            await token.connect(addr1).approve(stake.address, 100000);
+            await stake.setTreasury(owner.address);
+            await stake.connect(addr1).stake(100000);
+            await stake.collectFee();
+            expect(await token.balanceOf(owner.address)).to.equal(99900200);
         })
     });
 });
