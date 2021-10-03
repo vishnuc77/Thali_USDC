@@ -1,15 +1,7 @@
-# Basic Sample Hardhat Project
+# USDC Token
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+ERC20 token which is mintable and pausable.<br />
+Staking contract allows the user to deposit and withdraw USDC tokens.<br />
+● Once deposited there’s a time lock of 2 hours before withdrawing<br />
+● A fee of 0.2% will be deducted in every deposit and sent to the treasury of the contract.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
