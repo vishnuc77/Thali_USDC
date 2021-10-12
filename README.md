@@ -6,5 +6,5 @@ Staking contract allows the user to deposit and withdraw USDC tokens.<br />
 ● A fee of 0.2% will be deducted in every deposit and sent to the treasury of the contract.<br /><br />
 
 
-USDC Token Address: 0xeeF24C21A3074D6e90f7dA6098c5EF00474a7805<br />
-Stake Contract Address: 0xD9761EC6C0E4f52F2c04d5D546f60BEF84bbcc20
+USDC Token Address: 0x43754BF4bB540E99d01E46c984aAE6B0E14d43d2<br />
+Stake Contract Address: 0xFB5F5086E96e66E560743a2403Ea96c46E7d3550
