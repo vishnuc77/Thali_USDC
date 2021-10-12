@@ -5,8 +5,6 @@ const tokenAbi = require("../artifacts/contracts/Token.sol/Token.json");
 async function main() {
     const [deployer] = await ethers.getSigners();
     const tokenAddress = "0x4EC920398BE9Ce420668E9b2C259f6b2D12B36f5";
-
-    console.log(tokenAbi);
   
     const contract = new ethers.Contract(
         tokenAddress,

@@ -1,5 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 require('dotenv').config({path: './.env'});
+require("solidity-coverage");
 
 
 const alchemy_url = "https://eth-rinkeby.alchemyapi.io/v2/kPJSqlXGFLxT3DFZ0LWLqaxx2Vhnz1kp";

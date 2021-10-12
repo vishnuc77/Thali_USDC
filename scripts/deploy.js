@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 async function main() {
     const [deployer] = await ethers.getSigners();
   
@@ -14,6 +16,18 @@ async function main() {
     console.log("Token smart contract address:", token.address);
     console.log("Balance of owner:", ownerBalance.toString());
     console.log("Stake smart contract address:", stake.address);
+
+    const data_stake = {
+      address: stake.address,
+      abi: JSON.parse(stake.interface.format('json'))
+    };
+    fs.writeFileSync('frontend/src/Stake.json', JSON.stringify(data_stake));
+
+    const data_token = {
+      address: token.address,
+      abi: JSON.parse(token.interface.format('json'))
+    };
+    fs.writeFileSync('frontend/src/Token.json', JSON.stringify(data_token));
   }
   
   main()
