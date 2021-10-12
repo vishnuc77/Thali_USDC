@@ -2,6 +2,7 @@ import { ethers } from 'ethers';
 import Stake from './Stake.json';
 import Token from './Token.json';
 import { useState } from 'react';
+import './App.css';
 
 function App() {
   const [ balance, setBalance ] = useState(0);
@@ -115,19 +116,19 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <button onClick={fetchBalance}>Get Balance</button><br />
+      <header className="App-header"><br />
+        <button className="button" onClick={fetchBalance}>Get Balance</button><br /><br />
         <p>Balance: {balance}</p>
-        <button onClick={setTreasury}>Set Treasury Address</button><br />
-        <button onClick={getTreasury}>Get Treasury Address</button><br />
-        <input onChange={e => setApproveValue(e.target.value)} placeholder="Set approve value" />
-        <button onClick={approve}>Approve</button><br />
-        <button onClick={getAllowance}>Get Allowance</button><br />
+        <button className="button" onClick={setTreasury}>Set Treasury Address</button><br /><br />
+        <button className="button" onClick={getTreasury}>Get Treasury Address</button><br /><br />
+        <input type="text" onChange={e => setApproveValue(e.target.value)} placeholder="Set approve value" />&nbsp;
+        <button className="button" onClick={approve}>Approve</button><br /><br />
+        <button className="button" onClick={getAllowance}>Get Allowance</button><br /><br />
         <p>Allowance: {allowance}</p>
-        <input onChange={e => setStakeValue(e.target.value)} placeholder="Set stake value" />
-        <button onClick={stake}>Stake</button><br />
-        <input onChange={e => setWithdrawValue(e.target.value)} placeholder="Set withdraw value" />
-        <button onClick={withdraw}>Withdraw</button><br />
+        <input type="text" onChange={e => setStakeValue(e.target.value)} placeholder="Set stake value" />&nbsp;
+        <button className="button" onClick={stake}>Stake</button><br /><br />
+        <input type="text" onChange={e => setWithdrawValue(e.target.value)} placeholder="Set withdraw value" />&nbsp;
+        <button className="button" onClick={withdraw}>Withdraw</button><br /><br />
       </header>
     </div>
   );
